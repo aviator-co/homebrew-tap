@@ -5,21 +5,21 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.0.1-beta3"
+  version "0.0.1-beta4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta3/av_0.0.1-beta3_darwin_amd64.tar.gz"
-      sha256 "e3c71f68a55f2e10d9f4a246f38de721741dec19abcbdb70183e9ef8521c2b14"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_darwin_amd64.tar.gz"
+      sha256 "3519b30b9a3a4b125ac5f14e9374c66ed8d6a2007dbf524413a0f6a8d67a9ccd"
 
       def install
         bin.install "av"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta3/av_0.0.1-beta3_darwin_arm64.tar.gz"
-      sha256 "52c2abfb51f176f3e70876a1090dac788a82d876234c0f282de0cd31387a1588"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_darwin_arm64.tar.gz"
+      sha256 "22a27010a6ad6e68ec40704877c76089a507c14fe84474a5456388a2424dfc20"
 
       def install
         bin.install "av"
@@ -28,17 +28,17 @@ class Av < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta3/av_0.0.1-beta3_linux_amd64.tar.gz"
-      sha256 "3cbfc328935ef37ff259530b449601e06bffb481059001a7f05e01131cbb7569"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_linux_arm64.tar.gz"
+      sha256 "391b6856964f588ecda1ab4a057212a7d1f7bcb085fb1564b0f3d94e7806b4f1"
 
       def install
         bin.install "av"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta3/av_0.0.1-beta3_linux_arm64.tar.gz"
-      sha256 "606306d8aa84b02d7fa0e1f2fe5b3f46ac18c783a15cbbfa9d63711700f99007"
+    if Hardware::CPU.intel?
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_linux_amd64.tar.gz"
+      sha256 "caf32cece703e8decbaa067675d574f5189e5e4a534bbbffb9cef6a880eb2cc4"
 
       def install
         bin.install "av"
