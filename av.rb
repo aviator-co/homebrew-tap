@@ -5,21 +5,21 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.0.1-beta4"
+  version "0.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_darwin_amd64.tar.gz"
-      sha256 "3519b30b9a3a4b125ac5f14e9374c66ed8d6a2007dbf524413a0f6a8d67a9ccd"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1/av_0.0.1_macos_x86_64.tar.gz"
+      sha256 "e170e562a5704223abd3f8f14cbc28f296ca0480c671c54eaa23382b793a9bbc"
 
       def install
         bin.install "av"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_darwin_arm64.tar.gz"
-      sha256 "22a27010a6ad6e68ec40704877c76089a507c14fe84474a5456388a2424dfc20"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1/av_0.0.1_macos_arm64.tar.gz"
+      sha256 "c4644c0d2666057482272bd3a90bf27cf2ba0b13d6a51e3d41b04598690d2e61"
 
       def install
         bin.install "av"
@@ -29,16 +29,16 @@ class Av < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_linux_arm64.tar.gz"
-      sha256 "391b6856964f588ecda1ab4a057212a7d1f7bcb085fb1564b0f3d94e7806b4f1"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1/av_0.0.1_linux_arm64.tar.gz"
+      sha256 "a43672cae668a4bdc76c273427fd41669067703b41469b8b66e1b8f5836d9699"
 
       def install
         bin.install "av"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.0.1-beta4/av_0.0.1-beta4_linux_amd64.tar.gz"
-      sha256 "caf32cece703e8decbaa067675d574f5189e5e4a534bbbffb9cef6a880eb2cc4"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.1/av_0.0.1_linux_x86_64.tar.gz"
+      sha256 "e2f6c652f71c05b39bf74c5083afcbfaf3a6ba02045b0edb6d4d4e02af38fd1e"
 
       def install
         bin.install "av"
