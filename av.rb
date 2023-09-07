@@ -5,13 +5,13 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.0.21"
+  version "0.0.23"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/0.0.21/av_0.0.21_darwin_arm64.tar.gz"
-      sha256 "79b398397a1d5326c4bb9d0c328d624e995ca0cebb9415b0014137821ad12b44"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.23/av_0.0.23_darwin_arm64.tar.gz"
+      sha256 "e2ff33abb815ada91693536c92a4ba99b542f848231fe436e38be5c43aff74a3"
 
       def install
         bin.install "av"
@@ -19,8 +19,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/0.0.21/av_0.0.21_darwin_x86_64.tar.gz"
-      sha256 "fcbca1bc3e8339466feaf2bab37df0204b7bbe3dac51bce8398b813c89e5773e"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.23/av_0.0.23_darwin_x86_64.tar.gz"
+      sha256 "71268326cddde5d7aa110179eb1a49f58af5fa3ee484fa16e3957974645f40a2"
 
       def install
         bin.install "av"
@@ -30,18 +30,18 @@ class Av < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/0.0.21/av_0.0.21_linux_arm64.tar.gz"
-      sha256 "b98f3262b6cfb2754cd9b5a638a5d3b15d9c57dcda860d726598ed90ecd1c7e1"
+    if Hardware::CPU.intel?
+      url "https://github.com/aviator-co/av/releases/download/v0.0.23/av_0.0.23_linux_x86_64.tar.gz"
+      sha256 "57ed1db231ece7220b3d4e8270f9a34ca7a223043ffb46e216911adf9d4088d7"
 
       def install
         bin.install "av"
         man.install Dir["man/*"]
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/0.0.21/av_0.0.21_linux_x86_64.tar.gz"
-      sha256 "ce4c775478e1c66b4056e24c5dd6db4cff434c57b3d6a81ebf5fdce9832705d6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aviator-co/av/releases/download/v0.0.23/av_0.0.23_linux_arm64.tar.gz"
+      sha256 "d4ae18b3fc1d8fae21927cd5c273a7b837468c2e766098cdff4aeb9ac8630118"
 
       def install
         bin.install "av"
