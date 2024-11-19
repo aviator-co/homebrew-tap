@@ -5,26 +5,28 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.0.43"
+  version "0.0.44"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/aviator-co/av/releases/download/v0.0.43/av_0.0.43_darwin_x86_64.tar.gz"
-      sha256 "34fea60b5cdd91c8f8a527ded5919c1b084f2b310705dc55f44e2add361c098a"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_darwin_x86_64.tar.gz"
+      sha256 "d7d77c5f9bc2740d4cec8817968c1efdbe2ad006de6943563495e75146564b14"
 
       def install
         bin.install "av"
         man.install Dir["man/*"]
+        generate_completions_from_executable(bin/"av", "completion", shells: [:bash, :zsh])
       end
     end
     on_arm do
-      url "https://github.com/aviator-co/av/releases/download/v0.0.43/av_0.0.43_darwin_arm64.tar.gz"
-      sha256 "97cd092ddd9ca938c355b60888ad8f36a26e396c1474a39484e9fb4062207cb1"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_darwin_arm64.tar.gz"
+      sha256 "13db1a075e8c5374455ac03d133a0cb79a278bdf51073362aeaab775c7e55722"
 
       def install
         bin.install "av"
         man.install Dir["man/*"]
+        generate_completions_from_executable(bin/"av", "completion", shells: [:bash, :zsh])
       end
     end
   end
@@ -32,23 +34,25 @@ class Av < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aviator-co/av/releases/download/v0.0.43/av_0.0.43_linux_x86_64.tar.gz"
-        sha256 "3bdafd3f82697f0c5f36dc99fc6359075dfeb671c4cd1f2d8a5fcaa9fc19a582"
+        url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_linux_x86_64.tar.gz"
+        sha256 "dd1b91c00ed44fbbd408972d33bca8d78159b4759e269c644a83cfab343f009f"
 
         def install
           bin.install "av"
           man.install Dir["man/*"]
+          generate_completions_from_executable(bin/"av", "completion", shells: [:bash, :zsh])
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aviator-co/av/releases/download/v0.0.43/av_0.0.43_linux_arm64.tar.gz"
-        sha256 "b5aaf6a7b62500f27d762a50c7a92fabc11e701a67b69a250a213bcf9ff37bff"
+        url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_linux_arm64.tar.gz"
+        sha256 "542f4d6772267dd24a893ad75e18bb01f70390e6c908a7300e43999b21e95bdc"
 
         def install
           bin.install "av"
           man.install Dir["man/*"]
+          generate_completions_from_executable(bin/"av", "completion", shells: [:bash, :zsh])
         end
       end
     end
