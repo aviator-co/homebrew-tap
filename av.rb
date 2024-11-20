@@ -5,13 +5,13 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.0.44"
+  version "0.0.45"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_darwin_x86_64.tar.gz"
-      sha256 "d7d77c5f9bc2740d4cec8817968c1efdbe2ad006de6943563495e75146564b14"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.45/av_0.0.45_darwin_x86_64.tar.gz"
+      sha256 "cdf81c88d2f5d1d9aa5cf73ee447be0abac91f8bc5f0f78052e46bc0ca72938a"
 
       def install
         bin.install "av"
@@ -20,8 +20,8 @@ class Av < Formula
       end
     end
     on_arm do
-      url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_darwin_arm64.tar.gz"
-      sha256 "13db1a075e8c5374455ac03d133a0cb79a278bdf51073362aeaab775c7e55722"
+      url "https://github.com/aviator-co/av/releases/download/v0.0.45/av_0.0.45_darwin_arm64.tar.gz"
+      sha256 "c5a93bc588e3f7a0ce5d0d6a5687bb38c5e552f6dc861130d24cc48ab6df6ce7"
 
       def install
         bin.install "av"
@@ -34,8 +34,8 @@ class Av < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_linux_x86_64.tar.gz"
-        sha256 "dd1b91c00ed44fbbd408972d33bca8d78159b4759e269c644a83cfab343f009f"
+        url "https://github.com/aviator-co/av/releases/download/v0.0.45/av_0.0.45_linux_x86_64.tar.gz"
+        sha256 "71ff85de0a1879d1ced84bbf98ee4d10d6dcb310f0cc9deb88242eae32c5d154"
 
         def install
           bin.install "av"
@@ -46,8 +46,8 @@ class Av < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aviator-co/av/releases/download/v0.0.44/av_0.0.44_linux_arm64.tar.gz"
-        sha256 "542f4d6772267dd24a893ad75e18bb01f70390e6c908a7300e43999b21e95bdc"
+        url "https://github.com/aviator-co/av/releases/download/v0.0.45/av_0.0.45_linux_arm64.tar.gz"
+        sha256 "d3d0d57e5829122ff9ca92a728308593dc05c34f6caa4679673584357b24f440"
 
         def install
           bin.install "av"
