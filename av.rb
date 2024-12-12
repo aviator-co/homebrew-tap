@@ -5,13 +5,13 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/aviator-co/av/releases/download/v0.1.1/av_0.1.1_darwin_x86_64.tar.gz"
-      sha256 "5c5739bafa8f6995f939752e01aedf785ff2ee3668235b4d7335bb16f1689b00"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.2/av_0.1.2_darwin_x86_64.tar.gz"
+      sha256 "37d4d20c33a7b811c9b1ddfa2e832202903db29dcd706f19a101907110410689"
 
       def install
         bin.install "av"
@@ -20,8 +20,8 @@ class Av < Formula
       end
     end
     on_arm do
-      url "https://github.com/aviator-co/av/releases/download/v0.1.1/av_0.1.1_darwin_arm64.tar.gz"
-      sha256 "d0084ae52299bb28e6aa7b31efc37eaa1b9cf4e38199982c1f54c1237ac97407"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.2/av_0.1.2_darwin_arm64.tar.gz"
+      sha256 "36442ce680f47646488b3c259a370116d85b6ac6e6d93f3ed9b9d5257ce25566"
 
       def install
         bin.install "av"
@@ -34,8 +34,8 @@ class Av < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aviator-co/av/releases/download/v0.1.1/av_0.1.1_linux_x86_64.tar.gz"
-        sha256 "ce82c8927dadb7ed2e083c3900c8d5cb0ab70cafcaf2ae40e5bc6c74abcb2374"
+        url "https://github.com/aviator-co/av/releases/download/v0.1.2/av_0.1.2_linux_x86_64.tar.gz"
+        sha256 "e4618f49e0c86ac484a0e337c760d2eb3cfa562546ca188dffe56fb78af825af"
 
         def install
           bin.install "av"
@@ -46,8 +46,8 @@ class Av < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aviator-co/av/releases/download/v0.1.1/av_0.1.1_linux_arm64.tar.gz"
-        sha256 "1ea069bbfe632c701d894b68c234e5eb0779c66d80f6525b18b894d1c4538658"
+        url "https://github.com/aviator-co/av/releases/download/v0.1.2/av_0.1.2_linux_arm64.tar.gz"
+        sha256 "1849dc92810fcfb0df67cc3af6661c625f9d5ddcc06634d7ad4156351def1f96"
 
         def install
           bin.install "av"
