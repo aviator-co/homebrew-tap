@@ -5,13 +5,13 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.1.12"
+  version "0.1.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.12/av_0.1.12_darwin_x86_64.tar.gz"
-      sha256 "451a9081036e7de70bb8c7486113fcc6643cd3bfd3680132e1e9e64a86fe058f"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.13/av_0.1.13_darwin_x86_64.tar.gz"
+      sha256 "b9b0436a363b38f6691fb46df18da2cd6e46e54e619266d91f9614b6ff717f1b"
 
       def install
         bin.install "av"
@@ -20,8 +20,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.12/av_0.1.12_darwin_arm64.tar.gz"
-      sha256 "d459e459a72fd95591fe8f6fe126e8ed4b300777ad56a887df8be1baacf2839b"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.13/av_0.1.13_darwin_arm64.tar.gz"
+      sha256 "4277e1a2d680f7b1d816cb6aaacfaeafc41ab4d9bbe33c10280f5e1ca49e5a64"
 
       def install
         bin.install "av"
@@ -33,8 +33,8 @@ class Av < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.12/av_0.1.12_linux_x86_64.tar.gz"
-      sha256 "cbfc096cf5fc55c45cf9f6e9ea3ac70064f2c7d308e8d5ea9ac63e73ebee6ebf"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.13/av_0.1.13_linux_x86_64.tar.gz"
+      sha256 "2905650f7867e11d34c2760c2bc559bb1dbc88b543d7c36dd1903b2b10069347"
       def install
         bin.install "av"
         man.install Dir["man/*"]
@@ -42,8 +42,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.12/av_0.1.12_linux_arm64.tar.gz"
-      sha256 "35f0c5d003d72b8bca3c812c83b1be2ea32b72bbc3d3397e61a907cacda073d4"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.13/av_0.1.13_linux_arm64.tar.gz"
+      sha256 "227a26b1bd66360b9328f844baad2c9e6cf64cfa5d2b2c600d33904ec5854ebd"
       def install
         bin.install "av"
         man.install Dir["man/*"]
