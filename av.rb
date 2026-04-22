@@ -5,13 +5,13 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.1.24-rc1"
+  version "0.1.28"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.24-rc1/av_0.1.24-rc1_darwin_x86_64.tar.gz"
-      sha256 "c1a9cf996e3033f88414482b5da49668b88d666ac26762f8d34df3b5d5779000"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.28/av_0.1.28_darwin_x86_64.tar.gz"
+      sha256 "64c6a20d819b17437974482da0032fa1d255393098d1a049f6d7edba8ed44b45"
 
       define_method(:install) do
         bin.install "av"
@@ -20,8 +20,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.24-rc1/av_0.1.24-rc1_darwin_arm64.tar.gz"
-      sha256 "9056b489c9c8e1efc00c408736c8c26b00a700fb5aed730594fbdde5984bfb94"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.28/av_0.1.28_darwin_arm64.tar.gz"
+      sha256 "860ae45f3b281cc61d88c494515cb9353bd818ebc459f108e79f0666c3813e7d"
 
       define_method(:install) do
         bin.install "av"
@@ -33,8 +33,8 @@ class Av < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.24-rc1/av_0.1.24-rc1_linux_x86_64.tar.gz"
-      sha256 "8b216aa6185c7957f58baaa80990be97ce8658d56de7c5b88206117b2821c578"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.28/av_0.1.28_linux_x86_64.tar.gz"
+      sha256 "bea53523e16126973030f794ba23d9e643395bfa4480d4b11d7159e14668bcf9"
       define_method(:install) do
         bin.install "av"
         man.install Dir["man/*"]
@@ -42,8 +42,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.24-rc1/av_0.1.24-rc1_linux_arm64.tar.gz"
-      sha256 "65343ec1bceebe19e7bfacb79dfa0a839f43a573b8d5c48251d35593f81848f7"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.28/av_0.1.28_linux_arm64.tar.gz"
+      sha256 "4037473d6f7b671ea8623787fbbbf19281b8b5fb2c01ddb466b46d107fa4093d"
       define_method(:install) do
         bin.install "av"
         man.install Dir["man/*"]
