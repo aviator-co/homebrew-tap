@@ -5,13 +5,13 @@
 class Av < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.1.32"
+  version "0.1.35"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.32/av_0.1.32_darwin_x86_64.tar.gz"
-      sha256 "2b8e2d031ddb10250e98e861761fc22f3c1014aa49c2be21d8c33783f7d3259b"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.35/av_0.1.35_darwin_x86_64.tar.gz"
+      sha256 "24580fcba5e80e2e07026d58d035d46f4de088b44c723e6d6e14cf4e8ab3ecd8"
 
       define_method(:install) do
         bin.install "av"
@@ -20,8 +20,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.32/av_0.1.32_darwin_arm64.tar.gz"
-      sha256 "a8075391a2022f48fbbd40ad788d501e77bdcea198b001997d556351ec40a3f0"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.35/av_0.1.35_darwin_arm64.tar.gz"
+      sha256 "bf56bfb78baf96d87eebfe67f2652995ff2d0f5769d3b166eac3b3bc8998f5eb"
 
       define_method(:install) do
         bin.install "av"
@@ -33,8 +33,8 @@ class Av < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.32/av_0.1.32_linux_x86_64.tar.gz"
-      sha256 "d629a402b5376a74478242598c05143dbed444131211367f894ac9f598d0f9e2"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.35/av_0.1.35_linux_x86_64.tar.gz"
+      sha256 "1b8b0bcba038bf7d701309bd4027273cfd4dea666a6857842f212afc863faa9d"
       define_method(:install) do
         bin.install "av"
         man.install Dir["man/*"]
@@ -42,8 +42,8 @@ class Av < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.32/av_0.1.32_linux_arm64.tar.gz"
-      sha256 "c361702248d0de993b243ea6fb140e5eb632fcc780f9081c85d116d265242471"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.35/av_0.1.35_linux_arm64.tar.gz"
+      sha256 "6915c81673007a3a6872d18bacf5f5675835bfde6f875b5070234f7097086ed7"
       define_method(:install) do
         bin.install "av"
         man.install Dir["man/*"]
