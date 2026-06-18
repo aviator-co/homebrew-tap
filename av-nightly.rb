@@ -5,13 +5,13 @@
 class AvNightly < Formula
   desc ""
   homepage "https://aviator.co"
-  version "0.1.40-rc1-nightly"
+  version "0.1.41-rc1-nightly"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.40-rc1-nightly/av_0.1.40-rc1-nightly_darwin_x86_64.tar.gz"
-      sha256 "2a07d3fa9d9a08637ccc427b4c34b8e5da15ede8dbee5292a0cb2efbf60f285c"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.41-rc1-nightly/av_0.1.41-rc1-nightly_darwin_x86_64.tar.gz"
+      sha256 "7e84407568480fe9ed39cffcd4ce2fee857b2add3a1f0f76b4aa4428c6ae2058"
 
       define_method(:install) do
         bin.install "av"
@@ -20,8 +20,8 @@ class AvNightly < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.40-rc1-nightly/av_0.1.40-rc1-nightly_darwin_arm64.tar.gz"
-      sha256 "fac1b574173fcba099f88eeee301ad88548df3cc0419c2ce3b004088188db215"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.41-rc1-nightly/av_0.1.41-rc1-nightly_darwin_arm64.tar.gz"
+      sha256 "63819fe4831133852dbf9768a3207ac3c64a800a3cb7b9594d6c283814296274"
 
       define_method(:install) do
         bin.install "av"
@@ -33,8 +33,8 @@ class AvNightly < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.40-rc1-nightly/av_0.1.40-rc1-nightly_linux_x86_64.tar.gz"
-      sha256 "02611b354447c0de6656cd9cc9446d32aca8d86bb9996c77368a08e7d9b0a53c"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.41-rc1-nightly/av_0.1.41-rc1-nightly_linux_x86_64.tar.gz"
+      sha256 "805e1bc820b211d2af716a2529c8a4e19911b22cc1bb84863f9ed3c42e41b201"
       define_method(:install) do
         bin.install "av"
         man.install Dir["man/*"]
@@ -42,8 +42,8 @@ class AvNightly < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/av/releases/download/v0.1.40-rc1-nightly/av_0.1.40-rc1-nightly_linux_arm64.tar.gz"
-      sha256 "fca5ba4c4a62fd7a4bba1d33b334c2cacac4bd68c99856d9ea082929cc9bbc86"
+      url "https://github.com/aviator-co/av/releases/download/v0.1.41-rc1-nightly/av_0.1.41-rc1-nightly_linux_arm64.tar.gz"
+      sha256 "c3c5f377f21261b35047f961f082b0d945a36c523148b1bf3d2c930af6d156e7"
       define_method(:install) do
         bin.install "av"
         man.install Dir["man/*"]
