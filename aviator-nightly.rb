@@ -5,13 +5,13 @@
 class AviatorNightly < Formula
   desc "CLI tool to submit verifications and create runbooks on Aviator (nightly build)."
   homepage "https://aviator.co"
-  version "0.0.36-rc1-nightly"
+  version "0.0.37-rc1-nightly"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.36-rc1-nightly/aviator-cli_0.0.36-rc1-nightly_darwin_x86_64.tar.gz"
-      sha256 "c443fe93ff6d2bde1acb255f291b05aefec80586ced32320663d5ddaad92f3cf"
+      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.37-rc1-nightly/aviator-cli_0.0.37-rc1-nightly_darwin_x86_64.tar.gz"
+      sha256 "90e8aa7411bf9dde7c1fb46a5cedb7a364445c5d0a11e172f629f020c6d196dc"
 
       define_method(:install) do
         bin.install "aviator"
@@ -19,8 +19,8 @@ class AviatorNightly < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.36-rc1-nightly/aviator-cli_0.0.36-rc1-nightly_darwin_arm64.tar.gz"
-      sha256 "2143fbe3cd630c80bb1b5d1041efa85971dd38a41ff907287b469a1aa1d5f634"
+      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.37-rc1-nightly/aviator-cli_0.0.37-rc1-nightly_darwin_arm64.tar.gz"
+      sha256 "a1ceec12f8a000e5233a077504237241a224d175cd0cbc39c7fb98cd00658e8e"
 
       define_method(:install) do
         bin.install "aviator"
@@ -31,16 +31,16 @@ class AviatorNightly < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.36-rc1-nightly/aviator-cli_0.0.36-rc1-nightly_linux_x86_64.tar.gz"
-      sha256 "c0e723b17ff92f0c5e1cc97c9cd8cd9c74719a94bfc44245e6cc3df947621d82"
+      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.37-rc1-nightly/aviator-cli_0.0.37-rc1-nightly_linux_x86_64.tar.gz"
+      sha256 "dbbf7bb2b9b81c784510b5848f4d9330f39e62dd2eb7f26c832672ee7f4df080"
       define_method(:install) do
         bin.install "aviator"
         generate_completions_from_executable(bin/"aviator", "completion", shells: [:bash, :zsh, :fish])
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.36-rc1-nightly/aviator-cli_0.0.36-rc1-nightly_linux_arm64.tar.gz"
-      sha256 "e3b3725a6f5164c61022d12825ed2eb8dfebd2a600661d31ba35a48f35aaae0a"
+      url "https://github.com/aviator-co/aviator-cli/releases/download/v0.0.37-rc1-nightly/aviator-cli_0.0.37-rc1-nightly_linux_arm64.tar.gz"
+      sha256 "f0259b02cdcde4242bcc98b4eb7178808873ccee8656c5eb8ca8d3d50d5e7dd2"
       define_method(:install) do
         bin.install "aviator"
         generate_completions_from_executable(bin/"aviator", "completion", shells: [:bash, :zsh, :fish])
